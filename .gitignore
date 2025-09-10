@@ -1,0 +1,13 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.mdf
+*.ldf
+*.bak
+Thumbs.db
+desktop.ini
+App.config
+DatabaseHelper.cs
+Global.cs
