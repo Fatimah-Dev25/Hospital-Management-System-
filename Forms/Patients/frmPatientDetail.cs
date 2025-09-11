@@ -166,37 +166,46 @@ namespace HospitalManagementSystem.Forms.Patients
         {
             var testsList = labTestService.GetLabTestsListFilterd(null, _PatientID);
             dgvPatientTests.DataSource = testsList;
-            dgvPatientTests.Columns["LabTestConfirmed"].Visible = false;
-            lblTestsCount.Text = dgvPatientTests.Rows.Count.ToString();
-
-            foreach (DataGridViewRow row in dgvPatientTests.Rows)
+            
+            if(dgvPatientTests.Rows.Count > 0)
             {
-                if (Convert.ToInt32(row.Cells["LabTestConfirmed"].Value) == 1)
+                dgvPatientTests.Columns["LabTestConfirmed"].Visible = false;
+                lblTestsCount.Text = dgvPatientTests.Rows.Count.ToString();
+
+                foreach (DataGridViewRow row in dgvPatientTests.Rows)
                 {
-                    toolUpdateLabTest.Enabled = false;
-                    toolDeleteLabTest.Enabled = false;
+                    if (Convert.ToInt32(row.Cells["LabTestConfirmed"].Value) == 1)
+                    {
+                        toolUpdateLabTest.Enabled = false;
+                        toolDeleteLabTest.Enabled = false;
+
+                    }
 
                 }
-
             }
+            
         }
 
         private void _LoadPrescriptionsDetail()
         {
             var prescriptionsList = prescriptionService.GetPrescriptionsByPatientID(_PatientID);
             dgvPatientPrescriptions.DataSource = prescriptionsList;
-            dgvPatientPrescriptions.Columns["PaidPrescription"].Visible = false;
-            lblPrescriptionsCount.Text = dgvPatientPrescriptions.Rows.Count.ToString();
 
-            foreach (DataGridViewRow row in dgvPatientPrescriptions.Rows)
-            {
-                if (Convert.ToInt32(row.Cells["PaidPrescription"].Value) == 1)
+            if (dgvPatientPrescriptions.Rows.Count > 0) {
+
+                dgvPatientPrescriptions.Columns["PaidPrescription"].Visible = false;
+                lblPrescriptionsCount.Text = dgvPatientPrescriptions.Rows.Count.ToString();
+
+                foreach (DataGridViewRow row in dgvPatientPrescriptions.Rows)
                 {
-                    toolUpdatePatientPrescription.Enabled = false;
-                    toolDeletePrescription.Enabled = false;
+                    if (Convert.ToInt32(row.Cells["PaidPrescription"].Value) == 1)
+                    {
+                        toolUpdatePatientPrescription.Enabled = false;
+                        toolDeletePrescription.Enabled = false;
+
+                    }
 
                 }
-            
             }
         }
 
@@ -217,23 +226,25 @@ namespace HospitalManagementSystem.Forms.Patients
         {
             var allRecords = recordService.GetPatientRecords(_PatientID);
             dgvPatientRecords.DataSource = allRecords;
-            lblRecordsNumber.Text = dgvPatientRecords.Rows.Count.ToString();
 
-            foreach (DataGridViewRow row in dgvPatientRecords.Rows)
-            {
-                if (row.Cells["IsDeleted"].Value != null && Convert.ToBoolean(row.Cells["IsDeleted"].Value) == true)
-                {
-                    row.ReadOnly = true;
 
-                    row.DefaultCellStyle.BackColor = Color.LightGray;
-
-                    row.ContextMenuStrip = null;
-                }
-                //if (_CheckActiveAppointment(row)) {
+            if (dgvPatientRecords.Rows.Count > 0) {
                 
-                //    toolAddLabTest.Enabled = false;
-                //    toolIssuePrescription.Enabled = false;
-                //}
+                lblRecordsNumber.Text = dgvPatientRecords.Rows.Count.ToString();
+
+                foreach (DataGridViewRow row in dgvPatientRecords.Rows)
+                {
+                    if (row.Cells["IsDeleted"].Value != null && Convert.ToBoolean(row.Cells["IsDeleted"].Value) == true)
+                    {
+                        row.ReadOnly = true;
+
+                        row.DefaultCellStyle.BackColor = Color.LightGray;
+
+                        row.ContextMenuStrip = null;
+                    }
+
+                }
+
             }
         }
 
