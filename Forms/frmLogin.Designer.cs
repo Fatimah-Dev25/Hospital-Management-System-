@@ -44,6 +44,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.llblLoginAnotherAccount = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.viewPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -283,6 +284,19 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // llblLoginAnotherAccount
+            // 
+            this.llblLoginAnotherAccount.Font = new System.Drawing.Font("Segoe UI", 9.4F);
+            this.llblLoginAnotherAccount.Location = new System.Drawing.Point(525, 448);
+            this.llblLoginAnotherAccount.Name = "llblLoginAnotherAccount";
+            this.llblLoginAnotherAccount.Size = new System.Drawing.Size(277, 23);
+            this.llblLoginAnotherAccount.TabIndex = 16;
+            this.llblLoginAnotherAccount.TabStop = true;
+            this.llblLoginAnotherAccount.Text = "Login with another account";
+            this.llblLoginAnotherAccount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.llblLoginAnotherAccount.Visible = false;
+            this.llblLoginAnotherAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblLoginAnotherAccount_LinkClicked);
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.btnLogin;
@@ -290,6 +304,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(896, 534);
+            this.Controls.Add(this.llblLoginAnotherAccount);
             this.Controls.Add(this.viewPassword);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -339,5 +354,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox viewPassword;
+        private System.Windows.Forms.LinkLabel llblLoginAnotherAccount;
     }
 }

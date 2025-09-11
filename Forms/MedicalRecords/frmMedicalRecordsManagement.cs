@@ -343,12 +343,7 @@ namespace HospitalManagementSystem.Forms.MedicalRecords
                     row.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
                 }
 
-                if(checkActiveAppointment != 1)
-                {
-                    addLabTestToolStripMenuItem.Enabled = false;
-                    issuePrescriptionToolStripMenuItem.Enabled = false;
-                    generateInvoiceToolStripMenuItem.Enabled = false;
-                }
+               
                 
 
             }

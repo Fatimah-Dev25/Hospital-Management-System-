@@ -341,27 +341,7 @@ namespace HospitalManagementSystem.Forms.Appointments
 
         }
 
-        private void dgvAllAppointments_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            foreach (DataGridViewRow row in dgvAllAppointments.Rows)
-            {
-                if (row.IsNewRow) continue;
-
-                var value = row.Cells["RecordID"].Value;
-
-                if (value != DBNull.Value)
-                {
-                    row.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(216, 249, 153);
-                    issueNewRecord.Enabled = false;
-                    linkAppointmentToRecord.Enabled = false;
-                    updateAppointment.Enabled = false;
-                    AppointmentCancel.Enabled = false;
-                    deleteAppointment.Enabled = false;
-                }
-
-            }
-        }
-
+        
         private void AppointmentComplete_Click(object sender, EventArgs e)
         {
             if (!PermissionManager.HasPermission(GeneralPermissions.AppointmentsPermissions, SubPermission.Edit))
@@ -391,6 +371,27 @@ namespace HospitalManagementSystem.Forms.Appointments
 
                 MessageBox.Show("Appointment Completed Failed.",
                     "Complete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvAllAppointments_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvAllAppointments.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                var value = row.Cells["RecordID"].Value;
+
+                if (value != DBNull.Value)
+                {
+                    row.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(216, 249, 153);
+                    // issueNewRecord.Enabled = false;
+                    // linkAppointmentToRecord.Enabled = false;
+                    //  updateAppointment.Enabled = false;
+                    // AppointmentCancel.Enabled = false;
+                    // deleteAppointment.Enabled = false;
+                }
+
             }
         }
     }

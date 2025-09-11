@@ -36,23 +36,31 @@ namespace HospitalManagementSystem.Forms
         private void _FillStoredCredential()
         {
             string username = "", hashedPassword = "";
+            
+            bool hasCredential = Global.GetStoredCredential(ref username, ref hashedPassword) &&
+                     !string.IsNullOrEmpty(username) &&
+                     !string.IsNullOrEmpty(hashedPassword);
+            if (hasCredential)
+            { 
 
-            if (Global.GetStoredCredential(ref username, ref hashedPassword))
-            {
-                if(!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(hashedPassword))
-                {
-                    
                     txtUsername.Text = username;
                     cbRememberme.Checked = true;
                     _HashedPassword = hashedPassword;
                     txtPassword.BackColor = Color.Gray;
-                    txtPassword.Enabled = false;
+                    txtPassword.ForeColor = Color.Black;
+                    txtPassword.Text = "************************************";
+                    txtPassword.Enabled = true;
+                    viewPassword.Enabled = false;
+                    llblLoginAnotherAccount.Visible = true;
 
-                }
+                
+               
             }
             else
             {
                 cbRememberme.Checked = false;
+                llblLoginAnotherAccount.Visible= false;
+                viewPassword.Enabled = true;
             }
                 
         }
@@ -126,6 +134,14 @@ namespace HospitalManagementSystem.Forms
                 txtPassword.UseSystemPasswordChar = false;
             }
             
+        }
+
+        private void llblLoginAnotherAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            cbRememberme.Checked = false;
+            txtUsername.Focus();
         }
     }
 }

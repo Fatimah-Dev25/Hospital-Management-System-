@@ -87,7 +87,7 @@
             this.dgvAllAppointments.RowTemplate.Height = 24;
             this.dgvAllAppointments.Size = new System.Drawing.Size(1235, 505);
             this.dgvAllAppointments.TabIndex = 1;
-            this.dgvAllAppointments.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAllAppointments_CellFormatting);
+            this.dgvAllAppointments.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAllAppointments_CellFormatting_1);
             // 
             // AppointmentsMenu
             // 
@@ -104,7 +104,7 @@
             this.AppointmentCancel,
             this.deleteAppointment});
             this.AppointmentsMenu.Name = "AppointmentsMenu";
-            this.AppointmentsMenu.Size = new System.Drawing.Size(271, 240);
+            this.AppointmentsMenu.Size = new System.Drawing.Size(271, 212);
             // 
             // addNewAppointment
             // 
