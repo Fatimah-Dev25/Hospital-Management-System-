@@ -138,7 +138,7 @@ The database design follows **relational best practices** to ensure flexibility,
 ## 📸 Screenshots
 
 ### System Architecture Diagram
-![Architecture Diagram](./screenshots/Database-erd.png)
+![Architecture Diagram](./screenshots/Database-erd.emf)
 
 ### Dashboard
 ![Dashboard](./screenshots/Dashboaard.png)
