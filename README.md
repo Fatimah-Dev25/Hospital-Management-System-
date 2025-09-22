@@ -4,7 +4,7 @@ A comprehensive **desktop application** that simulates a real hospital environme
 
 The system provides complete management of daily hospital operations, including **patients, doctors, staff, appointments, medical records, lab tests, prescriptions, billing**, and **user management** with roles and permissions.
 
-**A live demo** of the project is available here: [Hospital Management System Demo](Project Demo/Hospital System Demo.mp4)
+**A live demo** of the project is available here: [Hospital Management System Demo](./Project%20Demo/Hospital%20System%20Demo.mp4)
 ---
 
 ## 🚀 Project Purpose
@@ -140,8 +140,7 @@ The database design follows **relational best practices** to ensure flexibility,
 - **StoredProcedures.sql** – Contains all stored procedures used in the system
 - **Views.sql** – Contains database views for reporting and dashboard analytics
 
-  > All SQL scripts are located in the (./Database) folder of the repository.
-
+ > All SQL scripts are located in the `./Database` folder of the repository.
 ---
 
 ## 📸 Screenshots
