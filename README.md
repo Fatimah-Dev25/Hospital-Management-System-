@@ -181,15 +181,20 @@ The database design follows **relational best practices** to ensure flexibility,
 
 ## 👩‍💻 Contributors / Author
 
-**Fatimah Daifallah** – Fullstack Desktop Developer  
-- Designed system architecture and layered structure
-- Developed **DAL, Services, and Presentation Layers**
-- Created database schema and integrated **ADO.NET**
-- Implemented core functionalities:
+**Fatimah Daifallah** – Fullstack Desktop Developer
+
+- Analyzed and designed the entire system architecture from scratch
+- Developed **Data Access Layer (DAL), Services, and Presentation Layers**
+- Created the complete database schema and integrated **ADO.NET**
+- Implemented core functionalities including:
   - Patient Management
   - Appointments & Medical Records
   - Lab Tests & Prescriptions
   - Billing & Payments
+- Conducted **testing, debugging, and validation** to ensure system stability
+- Designed user-friendly **interfaces and workflows** for a realistic hospital simulation
+- Wrote and maintained **SQL scripts** for tables, stored procedures, and views
+- Prepared the system for **future scalability and maintainability**
 
 ---
 
