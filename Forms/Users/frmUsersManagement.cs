@@ -80,6 +80,8 @@ namespace HospitalManagementSystem.Forms.Users
             }
             var frm = new frmAddUpdateUser();
             frm.ShowDialog();
+
+            _LoadUsersGrid();
         }
 
         private void updateUserToolStripMenuItem_Click(object sender, EventArgs e)

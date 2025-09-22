@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllRecords = new System.Windows.Forms.DataGridView();
             this.RecordsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addLabTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,24 +59,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAllRecords.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAllRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllRecords.ContextMenuStrip = this.RecordsMenu;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAllRecords.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAllRecords.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAllRecords.Location = new System.Drawing.Point(12, 166);
             this.dgvAllRecords.Name = "dgvAllRecords";
             this.dgvAllRecords.RowHeadersVisible = false;
@@ -98,7 +98,8 @@
             this.updateToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.RecordsMenu.Name = "RecordsMenu";
-            this.RecordsMenu.Size = new System.Drawing.Size(214, 184);
+            this.RecordsMenu.Size = new System.Drawing.Size(219, 212);
+            this.RecordsMenu.Opening += new System.ComponentModel.CancelEventHandler(this.RecordsMenu_Opening);
             // 
             // addLabTestToolStripMenuItem
             // 
@@ -106,7 +107,7 @@
             this.addLabTestToolStripMenuItem.Image = global::HospitalManagementSystem.Properties.Resources.flask;
             this.addLabTestToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addLabTestToolStripMenuItem.Name = "addLabTestToolStripMenuItem";
-            this.addLabTestToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
+            this.addLabTestToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.addLabTestToolStripMenuItem.Text = "Add Lab Test";
             this.addLabTestToolStripMenuItem.Click += new System.EventHandler(this.addLabTestToolStripMenuItem_Click);
             // 
@@ -116,7 +117,7 @@
             this.issuePrescriptionToolStripMenuItem.Image = global::HospitalManagementSystem.Properties.Resources.prescription1;
             this.issuePrescriptionToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.issuePrescriptionToolStripMenuItem.Name = "issuePrescriptionToolStripMenuItem";
-            this.issuePrescriptionToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
+            this.issuePrescriptionToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.issuePrescriptionToolStripMenuItem.Text = "Issue Prescription";
             this.issuePrescriptionToolStripMenuItem.Click += new System.EventHandler(this.issuePrescriptionToolStripMenuItem_Click);
             // 
@@ -126,7 +127,7 @@
             this.generateInvoiceToolStripMenuItem.Image = global::HospitalManagementSystem.Properties.Resources.invoice__1_1;
             this.generateInvoiceToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.generateInvoiceToolStripMenuItem.Name = "generateInvoiceToolStripMenuItem";
-            this.generateInvoiceToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
+            this.generateInvoiceToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.generateInvoiceToolStripMenuItem.Text = "Generate Invoice";
             this.generateInvoiceToolStripMenuItem.Click += new System.EventHandler(this.generateInvoiceToolStripMenuItem_Click);
             // 
@@ -135,7 +136,7 @@
             this.viewRecordDetailToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
             this.viewRecordDetailToolStripMenuItem.Image = global::HospitalManagementSystem.Properties.Resources.info1;
             this.viewRecordDetailToolStripMenuItem.Name = "viewRecordDetailToolStripMenuItem";
-            this.viewRecordDetailToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
+            this.viewRecordDetailToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.viewRecordDetailToolStripMenuItem.Text = "View Record Detail";
             this.viewRecordDetailToolStripMenuItem.Click += new System.EventHandler(this.viewRecordDetailToolStripMenuItem_Click);
             // 
@@ -143,7 +144,7 @@
             // 
             this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.updateToolStripMenuItem.Text = "Update";
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
@@ -152,7 +153,7 @@
             this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
             this.deleteToolStripMenuItem.Image = global::HospitalManagementSystem.Properties.Resources.delete1;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(213, 30);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(218, 30);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 

@@ -341,11 +341,35 @@ namespace HospitalManagementSystem.Forms.MedicalRecords
                 {
                     row.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(82, 82, 82);
                     row.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(255, 255, 255);
-                }
-
-               
+          
+                } 
                 
 
+            }
+        }
+
+        private void RecordsMenu_Opening(object sender, CancelEventArgs e)
+        {
+            if(dgvAllRecords.CurrentRow == null || dgvAllRecords.CurrentRow.IsNewRow)
+            {
+                e.Cancel = true;
+                return;
+            }
+
+            var hasActiveAppointment = Convert.ToInt32(dgvAllRecords.CurrentRow.Cells["HasRecordActiveAppointment"].Value);
+
+        
+            if (hasActiveAppointment == 0)
+            {
+                addLabTestToolStripMenuItem.Enabled = false;
+                issuePrescriptionToolStripMenuItem.Enabled = false;
+                generateInvoiceToolStripMenuItem.Enabled = false;
+            }
+            else
+            {
+                addLabTestToolStripMenuItem.Enabled = true;
+                issuePrescriptionToolStripMenuItem.Enabled = true;
+                generateInvoiceToolStripMenuItem.Enabled = true;
             }
         }
     }

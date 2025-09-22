@@ -95,7 +95,7 @@ namespace HospitalManagementSystem.Services
  
             DataTable dt = UserRepository.GetUserInfoByID(userID);
 
-            if (dt != null)
+            if (dt.Rows.Count > 0)
             {
 
                 return new User

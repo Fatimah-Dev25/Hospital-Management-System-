@@ -266,6 +266,7 @@ namespace HospitalManagementSystem.Forms.Patients
         }
         private void _LoadAppointmentsDetails()
         {
+            _PatientAppointments = appointmentService.GetAppointmentsFiltered(null, null, null, _PatientID);
             dgvPatientAppointments.DataSource = _PatientAppointments;
            _FormatAppointmentGrid();
         }
@@ -437,6 +438,8 @@ namespace HospitalManagementSystem.Forms.Patients
 
             var frm = new frmAddUpdateRecordInfo(appointmentID, _PatientID, doctorID,lblFullname.Text);
             frm.ShowDialog();
+
+            _LoadRecordsDetail();
         }
 
 

@@ -13,6 +13,7 @@ using HospitalManagementSystem.Forms.StaffForms;
 using HospitalManagementSystem.Forms.Users;
 using HospitalManagementSystem.Models;
 using HospitalManagementSystem.Services;
+using HospitalManagementSystem.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,9 @@ namespace HospitalManagementSystem
             InitializeComponent();
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

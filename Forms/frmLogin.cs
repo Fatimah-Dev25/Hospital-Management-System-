@@ -138,6 +138,7 @@ namespace HospitalManagementSystem.Forms
 
         private void llblLoginAnotherAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            _HashedPassword = "";
             txtUsername.Text = "";
             txtPassword.Text = "";
             cbRememberme.Checked = false;
