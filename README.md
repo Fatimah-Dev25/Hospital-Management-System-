@@ -4,6 +4,7 @@ A comprehensive **desktop application** that simulates a real hospital environme
 
 The system provides complete management of daily hospital operations, including **patients, doctors, staff, appointments, medical records, lab tests, prescriptions, billing**, and **user management** with roles and permissions.
 
+A **live demo** of the project is available here: [Hospital Management System Demo](Project Demo/Hospital System Demo.mp4)
 ---
 
 ## 🚀 Project Purpose
@@ -133,6 +134,13 @@ The database design follows **relational best practices** to ensure flexibility,
 - **Audit Logs** – Automatic tracking of all system operations via triggers
 - **Performance Enhancements** – Views and Stored Procedures for faster queries
 
+### SQL Files Included
+- **Tables.sql** – Contains all database table creation scripts
+- **StoredProcedures.sql** – Contains all stored procedures used in the system
+- **Views.sql** – Contains database views for reporting and dashboard analytics
+
+  > All SQL scripts are located in the (./Database) folder of the repository.
+
 ---
 
 ## 📸 Screenshots
@@ -186,12 +194,10 @@ The database design follows **relational best practices** to ensure flexibility,
 ---
 
 ## 🛣 Future Improvements / Roadmap 🚀
-- SMS/Email notifications for appointments and follow-ups
+- Implement a **Patient System** that allows patients to view their medical records, track appointments and receive notifications.
 - Inventory Management for medications and supplies
-- Integration with external systems (labs, pharmacies)
 - Enhanced analytics and reporting dashboards
 - Replace ADO.NET with **Entity Framework** for easier data management
-- Multi-user remote database support
 
 ---
 
